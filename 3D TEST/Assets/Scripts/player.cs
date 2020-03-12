@@ -64,13 +64,5 @@ public class player : MonoBehaviour
             transform.rotation = Quaternion.LookRotation(moveat, Vector3.up);
         }
     }
-    public void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.layer == 9)
-        {
-            Debug.Log(other.gameObject.layer);
-            Destroy(other.gameObject);
-        }
-        
-    }
+    
 }
