@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class GameUI : MonoBehaviour
 {
+    public static bool bEnd = false;
     [SerializeField] RectTransform FxHolder;
     [SerializeField] Image CircleImg;
     [SerializeField] Text txtProgress;
@@ -18,4 +19,24 @@ public class GameUI : MonoBehaviour
         FxHolder.rotation = Quaternion.Euler(new Vector3(0f, 0f, -progress * 360));
 
     }
+
+    public void updateProgress()
+    {
+        if (progress < 1)
+            progress += 0.01f;
+        else
+        {
+            print("lo para");
+            bEnd = true;
+        }
+            
+    }
+
+    public void resetProgress()
+    {
+        progress = 0f;
+        bEnd = false;
+        LevelingUp.GameIsDone = false;
+    }
+
 }
