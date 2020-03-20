@@ -15,9 +15,4 @@ public class coin : MonoBehaviour
     {
         transform.Rotate(new Vector3(0, 100 * Time.deltaTime, 0));
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("detectado");
-    }
 }

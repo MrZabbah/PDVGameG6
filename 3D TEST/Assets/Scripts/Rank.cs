@@ -18,6 +18,6 @@ public class Rank
 
     public override string ToString()
     {
-        return string.Format("{0}, score: {1}", playername, points);
+        return string.Format("{0}\t{1}", points, playername);
     }
 }

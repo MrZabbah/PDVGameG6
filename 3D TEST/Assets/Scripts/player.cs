@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class player : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class player : MonoBehaviour
     Vector3 targetposition;
     Vector3 lookat;
     Vector3 moveat;
+    public GameObject pref;
 
     public Camera cam;
     public float speed = 6;
@@ -64,5 +66,13 @@ public class player : MonoBehaviour
             transform.rotation = Quaternion.LookRotation(moveat, Vector3.up);
         }
     }
-    
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.layer == 10)
+        {
+            Instantiate(pref);
+        }
+    }
+
 }

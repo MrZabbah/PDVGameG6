@@ -17,10 +17,10 @@ public class Ranking
     }
     public override string ToString()
     {
-        string cad = "Ranking: \n";
-        for (int i = 0; i < ranking.Count; i++)
+        string cad = "";
+        for (int i = 1; i <= ranking.Count; i++)
         {
-            cad += ranking[i].ToString() + ", ";
+            cad += i + "\t" + ranking[i-1].ToString() + "\n";
         }
         return cad;
     }

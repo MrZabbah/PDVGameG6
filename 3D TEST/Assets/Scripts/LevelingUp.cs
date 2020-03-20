@@ -22,7 +22,7 @@ public class LevelingUp : MonoBehaviour
         txtProgress.text = "1," + Mathf.Floor(progress * 99).ToString();
         FxHolder.rotation = Quaternion.Euler(new Vector3(0f, 0f, -progress * 360));
 
-        if (GameIsDone == false && oPlayer.GetComponent<player_score>().score.getScore() == 1500)
+        if (GameIsDone == false && false)
         {
             levelMenuUI.SetActive(true);
             Time.timeScale = 0f;

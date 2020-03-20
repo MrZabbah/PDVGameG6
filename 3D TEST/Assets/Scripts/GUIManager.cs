@@ -7,7 +7,6 @@ public class GUIManager : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject[] panels;
-
     // Update is called once per frame
     void Start()
     {
@@ -29,8 +28,4 @@ public class GUIManager : MonoBehaviour
         Application.Quit(0);
     }
 
-    public void debugging()
-    {
-       
-    }
 }

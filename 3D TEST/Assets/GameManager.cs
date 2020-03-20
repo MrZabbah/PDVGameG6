@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 
     // Patrón Singleton:
     public static GameManager instance = null;
+    public RankingManager rankingmanager;
     private void Awake()
     {
         if (instance == null)
@@ -17,17 +18,8 @@ public class GameManager : MonoBehaviour
          DontDestroyOnLoad(this);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ChangeScene(int i)
     {
-        if (Input.GetKeyDown("1"))
-        {
-            SceneManager.LoadScene("Nivel 1");
-        }
-    }
-
-    public void ChangeScene(string name)
-    {
-        SceneManager.LoadScene(name);
+        SceneManager.LoadScene(i);
     }
 }
