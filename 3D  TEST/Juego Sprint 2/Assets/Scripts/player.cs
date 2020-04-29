@@ -10,6 +10,8 @@ public class player : MonoBehaviour
     Vector3 targetposition;
     Vector3 lookat;
     Vector3 moveat;
+    public Vector3 respawnPoint;
+
     public GameObject pref;
 
     public Camera cam;
@@ -24,6 +26,7 @@ public class player : MonoBehaviour
     {
         score = 0;
         targetposition = transform.position;
+        respawnPoint = transform.position;
         lookat = Vector3.forward;
         moveat = Vector3.forward;
     }
@@ -94,4 +97,8 @@ public class player : MonoBehaviour
         
     }
 
+    public void SetCheckpoint(Vector3 newCheckpoint)
+    {
+        respawnPoint = newCheckpoint;
+    }
 }
